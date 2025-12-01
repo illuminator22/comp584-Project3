@@ -1,1 +1,134 @@
+html {
+  box-sizing: border-box;
+}
 
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, Geneva, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #2772B0;
+}
+
+.wrapper {
+    width: 97%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+}
+
+div img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+/* 
+   GRID SETUP - REPLACING FLEXBOX
+  
+   1. I replaced 'display: flex' with 'display: grid'
+   2. I removed all margins on children and use 'gap' instead.
+*/
+
+.row {
+    display: grid; 
+    gap: 20px; /* Controls space between all columns/rows evenly */
+    margin-bottom: 20px;
+}
+
+/* 
+   I removed all width % and flex properties from here
+*/
+[class*="col-"] {
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.col-1 { background-color: #A3CDD9; }
+.col-2 { background-color: #FFFCE6; }
+.col-3 { background-color: #FFEBCD; }
+.col-4 { background-color: #CDB79E; }
+
+/* NEW PROPERTY: place-items
+
+   It centers content vertically and horizontally inside the grid cell.
+   Used here to center the text in the 5th column style.
+*/
+.col-5 {
+    background-color: #E6E6FA;
+    display: grid;       /* Nested grid for the card itself */
+    place-items: center; /* Centers content perfectly in the box */
+    text-align: center;
+}
+
+
+/*
+   RESPONSIVE GRID LAYOUTS 
+  
+*/
+
+/* MOBILE DEFAULT: 
+   Grid defaults to 1 column automatically, so I don't need to specify 
+   grid-template-columns here. It will just stack naturally.
+*/
+
+
+/* TABLET AND LARGER  */
+@media only screen and (min-width: 600px) {
+
+    /* LAYOUT 1: Standard 4 Columns */
+    /* repeat(4, 1fr) creates 4 columns of equal width */
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* LAYOUT 2: Standard 2 Columns */
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* LAYOUT 3: Asymmetrical (1 small, 1 large) */
+    /* 1fr 3fr means the second column is 3x larger than the first */
+    .grid-asym {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    /* LAYOUT 5: The 1-2-1 Sandwich */
+    /* NEW PROPERTY: grid-template-areas
+       This allows us to name our grid sections visually in the code.
+    */
+    .grid-sandwich {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: 
+            "leftside middle rightside";
+    }
+    
+    /* We assign the children to the named areas */
+    .item-left   { grid-area: leftside; }
+    .item-center { grid-area: middle; }
+    .item-right  { grid-area: rightside; }
+
+    /* LAYOUT 6: Auto-Fit 5 items */
+    /* NEW PROPERTY: minmax() + auto-fit
+       Since we need to fit as many columns as possible, but don't let them 
+       get smaller than 150px
+       This makes it responsive without even needing a media query!
+    */
+    .grid-5 {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
