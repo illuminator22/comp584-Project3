@@ -1,134 +1,131 @@
-html {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-*, 
-*:before, 
-*:after {
-  box-sizing: inherit;
-}
+  <head>
+    <meta charset="UTF-8">
+    <title>Doggos - Grid Version</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-body {
-    font-family: Arial, Geneva, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
+  <body>
+    <div class="wrapper">
+      
+      <h1>CSS Grid Layout</h1>
 
-a {
-    color: #2772B0;
-}
+      <div class="row grid-4">
+        <article class="col-1">
+          <h3>Boomer</h3>
+          <img src="https://placedog.net/250/250/?id=5" alt="Boomer doggo.">
+          <p>Speak squeak toy stay tug bark take it dachshund leave it maltese.</p>
+          <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+        <article class="col-1">
+          <h3>Charlie</h3>
+          <img src="https://placedog.net/250/250/?id=6" alt="Charlie doggo">
+          <p>Tail poodle peanut butter puppies dog house, dog bone dog growl.</p>
+          <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+        <article class="col-1">
+          <h3>Pax</h3>
+          <img src="https://placedog.net/250/250/?id=7" alt="Pax doggo">
+          <p>Leave it yorkshire terrier play dead leash down collar k9 spin poodle.</p>
+          <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+        <article class="col-1">
+          <h3>Scout</h3>
+          <img src="https://placedog.net/250/250/?id=8" alt="Scout doggo">
+          <p>K9 squeak toy k9 dog bowl milk bone sit pretty squirrel sit.</p>
+          <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+      </div>
 
-.wrapper {
-    width: 97%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-}
+      <div class="row grid-2">
+        <article class="col-2">
+          <h3>Yoda</h3>
+          <img src="https://placedog.net/250/200/?id=9" alt="Yoda doggo">
+          <p>Dachshund german shephard doberman pinscher leash lab dog bone dog bone roll over dachshund. Chihuahua chew toy down great dance english mastiff poodle tug dog toy greyhound.</p>
+          <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+        <article class="col-2">
+          <h3>Whiskey</h3>
+          <img src="https://placedog.net/250/200/?id=10" alt="Whiskey doggo">
+          <p>English mastiff play dead english mastiff, dog bulldog bulldog release heel bell bark bulldog. Poodle collar doberman pinscher dog toy dog toy come puppy leave it chow chow.</p>
+          <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+      </div>
 
-div img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
+      <div class="row grid-asym">
+        <article class="col-1">
+            <h3>Lenny</h3>
+            <img src="https://placedog.net/250/250/?id=11" alt="Lenny doggo">
+            <p>German shephard leap milk bone k9 rottweiler pomsky puppy.</p>
+            <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+        <article class="col-3">
+            <h3>Wendell</h3>
+            <img src="https://placedog.net/600/200/?id=12" alt="Wendell doggo">
+            <p>Dog toy puppy bulldog heel, rottweiler great dance heel maltese take it bring it. English mastiff paw take it roll over tug growl, leash doberman pinscher leave it poodle st bernard vet fetch. Leap leash paw dog toy lap dog tail Morkie.</p>
+            <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+      </div>
 
-h3 {
-    margin-top: 0;
-}
+      <div class="row">
+        <article class="col-4">
+            <h3>Riggs</h3>
+            <img src="https://placedog.net/800/200/?id=13" alt="Riggs doggo">
+            <p>Speak squeak toy stay tug bark take it dachshund leave it maltese. Lab poodle dog house puppies shake bite pomeranian spin, roll over poodle milk bone leave it.</p>
+            <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+      </div>
 
-/* 
-   GRID SETUP - REPLACING FLEXBOX
-  
-   1. I replaced 'display: flex' with 'display: grid'
-   2. I removed all margins on children and use 'gap' instead.
-*/
+      <div class="row grid-sandwich">
+        <article class="col-1 item-left">
+            <h3>Remy</h3>
+            <img src="https://placedog.net/250/250/?id=14" alt="Remy doggo">
+            <p>Leave it yorkshire terrier play dead leash down collar k9 spin poodle.</p>
+            <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+        
+        <article class="col-2 item-center">
+            <h3>Rambo</h3>
+            <img src="https://placedog.net/400/250/?id=15" alt="Rambo doggo">
+            <p>Tail poodle peanut butter puppies dog house, dog bone dog growl shake chase tail lap dog.</p>
+            <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+        
+        <article class="col-1 item-right">
+            <h3>Zeke</h3>
+            <img src="https://placedog.net/250/250/?id=16" alt="Zeke doggo">
+            <p>K9 squeak toy, k9 dog bowl, milk bone, sit pretty, squirrel sit. Jump dog bowl shake bring it.</p>
+            <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+      </div>
 
-.row {
-    display: grid; 
-    gap: 20px; /* Controls space between all columns/rows evenly */
-    margin-bottom: 20px;
-}
+      <div class="row grid-5">
+        <article class="col-5">
+            <h3>Tiny</h3>
+            <img src="https://placedog.net/200/200/?id=17" alt="dog">
+        </article>
+        <article class="col-5">
+            <h3>Tim</h3>
+            <img src="https://placedog.net/200/200/?id=18" alt="dog">
+        </article>
+        <article class="col-5">
+            <h3>Pip</h3>
+            <img src="https://placedog.net/200/200/?id=19" alt="dog">
+        </article>
+        <article class="col-5">
+            <h3>Pop</h3>
+            <img src="https://placedog.net/200/200/?id=20" alt="dog">
+        </article>
+        <article class="col-5">
+            <h3>Spot</h3>
+            <img src="https://placedog.net/200/200/?id=21" alt="dog">
+        </article>
+      </div>
 
-/* 
-   I removed all width % and flex properties from here
-*/
-[class*="col-"] {
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.col-1 { background-color: #A3CDD9; }
-.col-2 { background-color: #FFFCE6; }
-.col-3 { background-color: #FFEBCD; }
-.col-4 { background-color: #CDB79E; }
-
-/* NEW PROPERTY: place-items
-
-   It centers content vertically and horizontally inside the grid cell.
-   Used here to center the text in the 5th column style.
-*/
-.col-5 {
-    background-color: #E6E6FA;
-    display: grid;       /* Nested grid for the card itself */
-    place-items: center; /* Centers content perfectly in the box */
-    text-align: center;
-}
-
-
-/*
-   RESPONSIVE GRID LAYOUTS 
-  
-*/
-
-/* MOBILE DEFAULT: 
-   Grid defaults to 1 column automatically, so I don't need to specify 
-   grid-template-columns here. It will just stack naturally.
-*/
-
-
-/* TABLET AND LARGER  */
-@media only screen and (min-width: 600px) {
-
-    /* LAYOUT 1: Standard 4 Columns */
-    /* repeat(4, 1fr) creates 4 columns of equal width */
-    .grid-4 {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    /* LAYOUT 2: Standard 2 Columns */
-    .grid-2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* LAYOUT 3: Asymmetrical (1 small, 1 large) */
-    /* 1fr 3fr means the second column is 3x larger than the first */
-    .grid-asym {
-        grid-template-columns: 1fr 3fr;
-    }
-
-    /* LAYOUT 5: The 1-2-1 Sandwich */
-    /* NEW PROPERTY: grid-template-areas
-       This allows us to name our grid sections visually in the code.
-    */
-    .grid-sandwich {
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-areas: 
-            "leftside middle rightside";
-    }
-    
-    /* We assign the children to the named areas */
-    .item-left   { grid-area: leftside; }
-    .item-center { grid-area: middle; }
-    .item-right  { grid-area: rightside; }
-
-    /* LAYOUT 6: Auto-Fit 5 items */
-    /* NEW PROPERTY: minmax() + auto-fit
-       Since we need to fit as many columns as possible, but don't let them 
-       get smaller than 150px
-       This makes it responsive without even needing a media query!
-    */
-    .grid-5 {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-}
+    </div>
+  </body>
+</html>
